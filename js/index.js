@@ -135,14 +135,9 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const playerPrice =document.getElementById('player-price');
     const list  =document.querySelector("#players-busket").childNodes
     const listItem =list.length-1
-    if(4>=listItem){
-        const reuslt = playerPrice.value*listItem
-        const totalPrice =document.getElementById('player-total-price')
-        totalPrice.innerText = reuslt
-    }
-    else{
-        alert('iudhfiodsf')
-    }
+    const reuslt = playerPrice.value*listItem
+    const totalPrice =document.getElementById('player-total-price')
+    totalPrice.innerText = reuslt
 
 })
 
