@@ -30,14 +30,21 @@ document.getElementById('player-1').addEventListener('click', function(event){
         btn.removeAttribute("disabled")
     }
     else{
-        btn.style.background='gray'
         btn.setAttribute("disabled", true)
     }
     const players =getplayernameById('kimmich')
-    const busket =document.getElementById("players-busket")
-    const li =document.createElement('li')
-    li.innerText=players
-    busket.appendChild(li)
+    const busket =document.querySelector("#players-busket")
+    const busketElement =busket.children
+    const busketValue = busketElement.length
+    if(5>busketValue){
+        const li =document.createElement('li')
+        li.innerText=players
+        busket.appendChild(li)
+        btn.style.background='gray'
+    }
+    else{
+        alert('5 players added')
+    }
 })
 document.getElementById('player-2').addEventListener('click', function(event){
     const limit =event.target.innerText
@@ -46,15 +53,22 @@ document.getElementById('player-2').addEventListener('click', function(event){
         btn.removeAttribute("disabled")
     }
     else{
-        btn.style.background='gray'
         btn.setAttribute("disabled", true)
            
     }
     const players =getplayernameById('muller')
-    const busket =document.getElementById("players-busket")
-    const li =document.createElement('li')
-    li.innerText=players
-    busket.appendChild(li)
+    const busket =document.querySelector("#players-busket")
+    const busketElement =busket.children
+    const busketValue =busketElement.length
+    if(5>busketValue){
+        const li =document.createElement('li')
+        li.innerText=players
+        busket.appendChild(li)
+        btn.style.background='gray'
+    }
+    else{
+        alert('5 players added')
+    }
     
 })
 document.getElementById('player-3').addEventListener('click', function(event){
@@ -64,14 +78,22 @@ document.getElementById('player-3').addEventListener('click', function(event){
         btn.removeAttribute("disabled")
     }
     else{
-        btn.style.background='gray'
         btn.setAttribute("disabled", true)
     }
     const players =getplayernameById('gnabry')
-    const busket =document.getElementById("players-busket")
-    const li =document.createElement('li')
-    li.innerText=players
-    busket.appendChild(li) 
+    const busket =document.querySelector("#players-busket") 
+    const busketElement =busket.children
+    const busketValue =busketElement.length
+    console.log(busketValue)
+    if(5>busketValue){
+        const li =document.createElement('li')
+        li.innerText=players
+        busket.appendChild(li)
+        btn.style.background='gray'
+    }
+    else{
+        alert('5 players added')
+    }
 })
 
 document.getElementById('player-4').addEventListener('click', function(event){
@@ -81,14 +103,21 @@ document.getElementById('player-4').addEventListener('click', function(event){
         btn.removeAttribute("disabled")
     }
     else{
-        btn.style.background='gray'
         btn.setAttribute("disabled", true)
     }
     const players =getplayernameById('jamal')
-    const busket =document.getElementById("players-busket")
-    const li =document.createElement('li')
-    li.innerText=players
-    busket.appendChild(li)
+    const busket =document.querySelector("#players-busket")
+    const busketElement =busket.children
+    const busketValue =busketElement.length
+    if(5>busketValue){
+        const li =document.createElement('li')
+        li.innerText=players
+        busket.appendChild(li)
+        btn.style.background='gray'
+    }
+    else{
+        alert('5 players added')
+    }
     
 })
 
@@ -99,14 +128,22 @@ document.getElementById('player-5').addEventListener('click', function(event){
         btn.removeAttribute("disabled")
     }
     else{
-        btn.style.background='gray'
+        
         btn.setAttribute("disabled", true)
     }
     const players =getplayernameById('nauer')
-    const busket =document.getElementById("players-busket")
-    const li =document.createElement('li')
-    li.innerText=players
-    busket.appendChild(li)
+    const busket =document.querySelector("#players-busket")
+    const busketElement =busket.children
+    const busketValue =busketElement.length
+    if(5>busketValue){
+        const li =document.createElement('li')
+        li.innerText=players
+        busket.appendChild(li)
+        btn.style.background='gray'
+    }
+    else{
+        alert('5 players added')
+    }
     
 })
 document.getElementById('player-6').addEventListener('click', function(event){
@@ -116,14 +153,22 @@ document.getElementById('player-6').addEventListener('click', function(event){
         btn.removeAttribute("disabled")
     }
     else{
-        btn.style.background='gray'
+        
         btn.setAttribute("disabled", true)
     }
     const players =getplayernameById('mane')
-        const busket =document.getElementById("players-busket")
-    const li =document.createElement('li')
-    li.innerText=players
-    busket.appendChild(li)
+    const busket =document.querySelector("#players-busket")
+    const busketElement =busket.children
+    const busketValue =busketElement.length
+    if(5>busketValue){
+        const li =document.createElement('li')
+        li.innerText=players
+        busket.appendChild(li)
+        btn.style.background='gray'
+    }
+    else{
+        alert('5 players added')
+    }
     
 })
 
