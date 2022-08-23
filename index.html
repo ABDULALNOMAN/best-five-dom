@@ -24,7 +24,7 @@
                     <p>36 Goals</p>
                     <p>120 Assist</p>
                 </div>
-                <button id="player-1" class="w-10/12 mx-auto block mt-6 bg-blue-800 py-1">SELECT</button>
+                <button id="player-1" class="w-10/12 mx-auto block mt-6 bg-blue-800 py-1" >SELECT</button>
             </div>
             <div class="col-span-3 border border-slate-600 bg-slate-900 rounded-sm h-80">
                 <img class="h-1/2 w-full" src="./image/GettyImages-961663050.0.0.jpg" alt="">
@@ -46,7 +46,7 @@
             </div>
             <div class="col-span-3 border border-slate-600 bg-slate-900 rounded-sm h-80">
                 <h3 class="text-center mt-5 font-semibold text-2xl">Selected - V</h3>
-                <ol>
+                <ol type="1" id="players-busket" class="text-center">
 
                 </ol>
             </div>
@@ -82,27 +82,27 @@
                     <h3 class="text-center mt-2 font-semibold text-2xl">Budget</h3>
                     <div class="flex justify-evenl align-baseline mt-3">
                         <h4 class="w-1/2">Per Player</h4>
-                        <input class="w-1/2" type="text" name="" id="">
+                        <input class="w-1/2 text-black" type="text" name="" id="player-price">
                     </div>
-                    <button class="w-full mx-auto block  bg-blue-800 py-1 mt-3">Calculate</button>
+                    <button id="calculate-button" class="w-full mx-auto block  bg-blue-800 py-1 mt-3">Calculate</button>
                     <div>
                         <div class="flex justify-evenly items-center mt-3">
                             <h5 class="w-2/3">player experses</h5>
-                            <p class="w-1/3">$00</p>
+                            <p class="w-1/3">$<span id="player-total-price">00</span></p>
                         </div>
                         <div  class="flex justify-evenly items-center mt-3">
                             <h5 class="w-1/2">Manager</h5>
-                            <input class="w-1/2" type="text">
+                            <input id="manager" class="w-1/2 text-black" type="text">
                         </div>
                         <div class="flex justify-evenly items-center mt-3">
                             <h5 class="w-1/2">Coach</h5>
-                            <input class="w-1/2" type="text">
+                            <input id="coach" class="w-1/2 text-black" type="text">
                         </div>
                     </div>
-                    <button class="w-full mx-auto block  bg-blue-800 py-1 mt-3">Calculate Total</button>
+                    <button id="claculate-total" class="w-full mx-auto block  bg-blue-800 py-1 mt-3">Calculate Total</button>
                     <div class="flex justify-between items-center mt-3 ">
                         <h5>total</h5>
-                        <p class="text-orange-600">$00</p>
+                        <p class="text-orange-600">$<span id="total">00</span></p>
                     </div>
                 </div>
             </div>

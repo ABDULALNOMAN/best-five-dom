@@ -1,8 +1,9 @@
-function getplayernameById(player){
+function getplayernameById(player, PlayersBusket){
     const playerId =document.getElementById(player);
     const playeardValue = playerId.innerText
     if(playeardValue==='Jashua Kimmich'){
         return 'Jashua Kimmich';
+
     }
     else if(playeardValue==='Thomas Muller'){
         return 'Thomas muller' ;
@@ -22,67 +23,148 @@ function getplayernameById(player){
 }
 
 
-document.getElementById('player-1').addEventListener('click', function(){
+document.getElementById('player-1').addEventListener('click', function(event){
+    const limit =event.target.innerText
+    const btn =document.getElementById('player-1')
+    if(1>=limit){
+        btn.removeAttribute("disabled")
+    }
+    else(
+        btn.setAttribute("disabled", true)
+    )
     const players =getplayernameById('kimmich')
-    console.log(players)
-    const 
-    
+    const busket =document.getElementById("players-busket")
+    const li =document.createElement('li')
+    li.innerText=players
+    busket.appendChild(li)
 })
-document.getElementById('player-2').addEventListener('click', function(){
+document.getElementById('player-2').addEventListener('click', function(event){
+    const limit =event.target.innerText
+    const btn =document.getElementById('player-2')
+    if(1>=limit){
+        btn.removeAttribute("disabled")
+    }
+    else(
+        btn.setAttribute("disabled", true)
+    )
     const players =getplayernameById('muller')
-    console.log(players)
+    const busket =document.getElementById("players-busket")
+    const li =document.createElement('li')
+    li.innerText=players
+    busket.appendChild(li)
     
 })
-document.getElementById('player-3').addEventListener('click', function(){
+document.getElementById('player-3').addEventListener('click', function(event){
+    const limit =event.target.innerText
+    const btn =document.getElementById('player-3')
+    if(1>=limit){
+        btn.removeAttribute("disabled")
+    }
+    else(
+        btn.setAttribute("disabled", true)
+    )
     const players =getplayernameById('gnabry')
-    console.log(players)
-    
+    const busket =document.getElementById("players-busket")
+    const li =document.createElement('li')
+    li.innerText=players
+    busket.appendChild(li) 
 })
 
-document.getElementById('player-4').addEventListener('click', function(){
+document.getElementById('player-4').addEventListener('click', function(event){
+    const limit =event.target.innerText
+    const btn =document.getElementById('player-4')
+    if(1>=limit){
+        btn.removeAttribute("disabled")
+    }
+    else(
+        btn.setAttribute("disabled", true)
+    )
     const players =getplayernameById('jamal')
-    console.log(players)
+    const busket =document.getElementById("players-busket")
+    const li =document.createElement('li')
+    li.innerText=players
+    busket.appendChild(li)
     
 })
 
-document.getElementById('player-5').addEventListener('click', function(){
+document.getElementById('player-5').addEventListener('click', function(event){
+    const limit =event.target.innerText
+    const btn =document.getElementById('player-5')
+    if(1>=limit){
+        btn.removeAttribute("disabled")
+    }
+    else(
+        btn.setAttribute("disabled", true)
+    )
     const players =getplayernameById('nauer')
-    console.log(players)
+    const busket =document.getElementById("players-busket")
+    const li =document.createElement('li')
+    li.innerText=players
+    busket.appendChild(li)
     
 })
-document.getElementById('player-6').addEventListener('click', function(){
+document.getElementById('player-6').addEventListener('click', function(event){
+    const limit =event.target.innerText
+    const btn =document.getElementById('player-6')
+    if(1>=limit){
+        btn.removeAttribute("disabled")
+    }
+    else(
+        btn.setAttribute("disabled", true)
+    )
     const players =getplayernameById('mane')
-    console.log(players)
+        const busket =document.getElementById("players-busket")
+    const li =document.createElement('li')
+    li.innerText=players
+    busket.appendChild(li)
     
 })
 
+// 
+// calculate function
+// 
+
+document.getElementById('calculate-button').addEventListener('click', function(){
+    const playerPrice =document.getElementById('player-price');
+    const list  =document.querySelector("#players-busket").childNodes
+    const listItem =list.length-1
+    if(4<=listItem){
+        const reuslt = playerPrice.value*listItem
+        const totalPrice =document.getElementById('player-total-price')
+        totalPrice.innerText = reuslt
+    }
+    else{
+        alert('iudhfiodsf')
+    }
+
+})
+
+// 
+// calculate total function
+// 
+
+document.getElementById('claculate-total').addEventListener('click', function(){
+    const totalPrice =document.getElementById('player-total-price');
+    const totalPriceElement =totalPrice.innerText;
+    const totalPriceValue = parseInt(totalPriceElement);
+
+    const mangerValue =document.getElementById('manager');
+    const managerValueElement=mangerValue.value;
+    const managerNumber=parseInt(managerValueElement);
+
+    const coachValue =document.getElementById('coach');
+    const coachValueElement =coachValue.value
+    const coachNumber =parseInt(coachValueElement);
+
+    const mangerCoachAddition = managerNumber + coachNumber + totalPriceValue
+
+    const calculateTotal =document.getElementById('total');
+    const calculateTotalString =calculateTotal.innerText;
+    const calculateTotalValue =parseInt(calculateTotalString);
+    calculateTotal.innerText =mangerCoachAddition;
+})
 
 
+    
 
 
-
-// optional code
-
-
-
-const players = document.getElementsByClassName("player");
-for(const playeardId of players){
-    playeardId.addEventListener('click' , function(event){
-        // const name =event.target.innerText
-        // console.log(name)
-
-        // const firstPlayer = getplayernameById('kimmich')
-        // console.log(firstPlayer)
-        // const secondPlayer =getplayernameById('muller')
-        // console.log(secondPlayer)
-
-        // const name =document.getElementById('muller')
-        // const nameValue =name.innerText
-        // if(nameValue==='Jashua Kimmich'){
-        //     console.log(true)
-        // }
-        // else{
-        //     console.log(false)
-        // }
-    })
-}
