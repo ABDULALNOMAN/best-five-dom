@@ -29,9 +29,10 @@ document.getElementById('player-1').addEventListener('click', function(event){
     if(1>=limit){
         btn.removeAttribute("disabled")
     }
-    else(
+    else{
+        btn.style.background='gray'
         btn.setAttribute("disabled", true)
-    )
+    }
     const players =getplayernameById('kimmich')
     const busket =document.getElementById("players-busket")
     const li =document.createElement('li')
@@ -44,9 +45,11 @@ document.getElementById('player-2').addEventListener('click', function(event){
     if(1>=limit){
         btn.removeAttribute("disabled")
     }
-    else(
+    else{
+        btn.style.background='gray'
         btn.setAttribute("disabled", true)
-    )
+           
+    }
     const players =getplayernameById('muller')
     const busket =document.getElementById("players-busket")
     const li =document.createElement('li')
@@ -60,9 +63,10 @@ document.getElementById('player-3').addEventListener('click', function(event){
     if(1>=limit){
         btn.removeAttribute("disabled")
     }
-    else(
+    else{
+        btn.style.background='gray'
         btn.setAttribute("disabled", true)
-    )
+    }
     const players =getplayernameById('gnabry')
     const busket =document.getElementById("players-busket")
     const li =document.createElement('li')
@@ -76,9 +80,10 @@ document.getElementById('player-4').addEventListener('click', function(event){
     if(1>=limit){
         btn.removeAttribute("disabled")
     }
-    else(
+    else{
+        btn.style.background='gray'
         btn.setAttribute("disabled", true)
-    )
+    }
     const players =getplayernameById('jamal')
     const busket =document.getElementById("players-busket")
     const li =document.createElement('li')
@@ -93,9 +98,10 @@ document.getElementById('player-5').addEventListener('click', function(event){
     if(1>=limit){
         btn.removeAttribute("disabled")
     }
-    else(
+    else{
+        btn.style.background='gray'
         btn.setAttribute("disabled", true)
-    )
+    }
     const players =getplayernameById('nauer')
     const busket =document.getElementById("players-busket")
     const li =document.createElement('li')
@@ -109,9 +115,10 @@ document.getElementById('player-6').addEventListener('click', function(event){
     if(1>=limit){
         btn.removeAttribute("disabled")
     }
-    else(
+    else{
+        btn.style.background='gray'
         btn.setAttribute("disabled", true)
-    )
+    }
     const players =getplayernameById('mane')
         const busket =document.getElementById("players-busket")
     const li =document.createElement('li')
@@ -128,7 +135,7 @@ document.getElementById('calculate-button').addEventListener('click', function()
     const playerPrice =document.getElementById('player-price');
     const list  =document.querySelector("#players-busket").childNodes
     const listItem =list.length-1
-    if(4<=listItem){
+    if(4>=listItem){
         const reuslt = playerPrice.value*listItem
         const totalPrice =document.getElementById('player-total-price')
         totalPrice.innerText = reuslt
